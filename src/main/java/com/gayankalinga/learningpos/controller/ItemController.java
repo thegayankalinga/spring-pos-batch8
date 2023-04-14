@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/item")
 @CrossOrigin
@@ -27,5 +29,17 @@ public class ItemController {
         );
 
         return responseEntity;
+    }
+
+    @GetMapping(path = "get/all")
+    public ResponseEntity<StandardResponse> getAllItems(){
+        List<ItemDto> itemDtoList = itemService.getAllItems();
+
+        ResponseEntity<StandardResponse> standardResponse = new ResponseEntity<>(
+                new StandardResponse(200, "Items Found", itemDtoList),
+                HttpStatus.OK
+        );
+
+        return standardResponse;
     }
 }

@@ -5,16 +5,10 @@ import java.util.ArrayList;
 
 public class CustomerDTO {
 
-
-
     private String customerName;
-
     private String customerAddress;
-
     private ArrayList contactNumbers;
-
     private String nic;
-
     private boolean activeStatus;
 
     public CustomerDTO() {

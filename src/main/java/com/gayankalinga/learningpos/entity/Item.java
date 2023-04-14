@@ -21,11 +21,13 @@ public class Item {
     private int itemId;
 
     @Column(name = "item_name", nullable = false)
-    private String itemName;
+    private java.lang.String itemName;
+
 
     @Column(name = "item_qty")
     private int itemQty;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "qty_type")
     private QuantityType quantityType;
 

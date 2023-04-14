@@ -13,7 +13,7 @@ import java.util.List;
 
 @Service
 public interface CustomerService {
-    public String saveCustomer(CustomerDTO customerDTO);
+    String saveCustomer(CustomerDTO customerDTO);
 
     CustomerDTO updateCustomer(CustomerUpdateRequestDTO customerUpdateRequestDTO);
 

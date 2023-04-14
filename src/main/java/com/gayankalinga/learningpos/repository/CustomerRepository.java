@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /*
-- this is the data base work based on the entity
+- this is the database work based on the entity
  */
 
 @Repository
